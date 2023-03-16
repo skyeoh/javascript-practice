@@ -40,3 +40,9 @@ document.getElementById("decrement").innerHTML = decrement;
 a = 10, b = 20, c = 25, d = 5, e = 2;
 let total = a + b - c * d / e + e * (a * c - b / d);
 document.getElementById("operator-precedence").innerHTML = total; // 459.5
+
+let i = 10, j = 20;
+let prefix = ++i; // prefix = 11, i = 11
+let postfix = j++; // postfix = 20, j = 21
+let elementContent =  "i = " + i + ", prefix = " + prefix + ", j = " + j + ", postfix = " + postfix;
+document.getElementById("prefix-postfix").innerHTML = elementContent;
