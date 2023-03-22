@@ -29,6 +29,9 @@ document.getElementById("modulo").innerHTML = remainder;
 let power = d**e;
 document.getElementById("power").innerHTML = power;
 
+let powerNonInteger = d**(1/2);
+document.getElementById("power-noninteger").innerHTML = powerNonInteger;
+
 d++;
 let increment = d;
 document.getElementById("increment").innerHTML = increment;
