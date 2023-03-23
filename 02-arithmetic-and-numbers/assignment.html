@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Assignment</title>
+        <style>
+            ul {
+                background-color: peachpuff;
+                width: 500px;
+                border: 2px gray solid;
+                padding: 10px 10px 10px 40px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Assignment</h1>
+        <ul>
+            <li>console.log(23 + 97)</li>
+            <li>console.log(11 + 22 + 33 + 44 + 55 + 66);</li>
+            <li>console.log((4 + 6 + 9) / 77)</li>
+            <li>let a = 10</li>
+            <li>console.log(a)</li>
+            <li>console.log(9 * a)</li>
+            <li>let b = 7 * a</li>
+            <li>console.log(b)</li>
+            <li>const max = 57</li>
+            <li>const actual = max - 13</li>
+            <li>const percentage = actual / max</li>
+            <li><span id="max-actual-percentage"></span></li>
+        </ul>
+
+        <script>
+            console.log(23 + 97);
+
+            console.log(11 + 22 + 33 + 44 + 55 + 66);
+
+            console.log((4 + 6 + 9) / 77);
+
+            let a = 10;
+            console.log(a);
+            console.log(9 * a);
+            let b = 7 * a;
+            console.log(b);
+
+            const max = 57;
+            const actual = max - 13;
+            const percentage = actual / max;
+            document.getElementById("max-actual-percentage").innerHTML = "max = " + max + ", actual = " + actual + ", percentage = " + percentage.toFixed(4);
+        </script>
+    </body>
+</html>
