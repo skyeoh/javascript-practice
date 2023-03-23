@@ -28,6 +28,10 @@
             <li>const actual = max - 13</li>
             <li>const percentage = actual / max</li>
             <li><span id="max-actual-percentage"></span></li>
+            <li>console.log("10" * 5 / "2.5" - (true / 10) * 100 + " hello")</li>
+            <li>console.log(121 + ("20"/10 + "25" * 20))</li>
+            <li>console.log(("6" + "10") / 10)</li>
+            <li>console.log("hello world! " + 8 * ("5" + 2) + 21 * true / 3))</li>
         </ul>
 
         <script>
@@ -47,6 +51,14 @@
             const actual = max - 13;
             const percentage = actual / max;
             document.getElementById("max-actual-percentage").innerHTML = "max = " + max + ", actual = " + actual + ", percentage = " + percentage.toFixed(4);
+
+            console.log("10" * 5 / "2.5" - (true / 10) * 100 + " hello"); // expected output: "10 hello"
+
+            console.log(121 + ("20"/10 + "25" * 20)); // expected output: 623
+
+            console.log(("6" + "10") / 10); // expected output: 61
+
+            console.log("hello world! " + 8 * ("5" + 2) + 21 * true / 3); // expected output: "hello world! 4167"
         </script>
     </body>
 </html>
