@@ -54,6 +54,14 @@ document.getElementById("numeric-string-2").innerHTML = -"20.9" + " = -Number(\"
 document.getElementById("numeric-undefined-2").innerHTML = -undefined + " = -Number(undefined) = " + -Number(undefined);
 document.getElementById("numeric-null-2").innerHTML = -null + " = -Number(null) = " + -Number(null);
 
+let varA;
+let returnVar = (varA = 20);
+document.getElementById("assignment-return").innerHTML = returnVar;
+
+let varB = 25;
+let returnVarComma = (10 + 2, varB / 5, ++varB);
+document.getElementById("comma-return").innerHTML = returnVarComma;
+
 let i = 10, j = 20;
 let prefix = ++i; // prefix = 11, i = 11
 let postfix = j++; // postfix = 20, j = 21
