@@ -44,6 +44,16 @@ a = 10, b = 20, c = 25, d = 5, e = 2;
 let total = a + b - c * d / e + e * (a * c - b / d);
 document.getElementById("operator-precedence").innerHTML = total; // 459.5
 
+document.getElementById("numeric-true").innerHTML = +true + " = Number(true) = " + Number(true);
+document.getElementById("numeric-string").innerHTML = +"20.9" + " = Number(\"20.9\") = " + Number("20.9");
+document.getElementById("numeric-undefined").innerHTML = +undefined + " = Number(undefined) = " + Number(undefined);
+document.getElementById("numeric-null").innerHTML = +null + " = Number(null) = " + Number(null);
+
+document.getElementById("numeric-true-2").innerHTML = -true + " = -Number(true) = " + -Number(true);
+document.getElementById("numeric-string-2").innerHTML = -"20.9" + " = -Number(\"20.9\") = " + -Number("20.9");
+document.getElementById("numeric-undefined-2").innerHTML = -undefined + " = -Number(undefined) = " + -Number(undefined);
+document.getElementById("numeric-null-2").innerHTML = -null + " = -Number(null) = " + -Number(null);
+
 let i = 10, j = 20;
 let prefix = ++i; // prefix = 11, i = 11
 let postfix = j++; // postfix = 20, j = 21
