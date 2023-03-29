@@ -39,3 +39,16 @@ I gave it a score of 90%.`;
 console.log("multilineString1 = " + multilineString1);
 const multilineString2 = "I like the song.\nI gave it a score of 90%.";
 console.log("multilineString2 = " + multilineString2);
+
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+console.log("text.length = " + text.length);
+
+text = "Apple, Banana, Kiwi";
+console.log("text.slice(7, 13) = " + text.slice(7, 13));
+console.log("text.slice(7) = " + text.slice(7));
+console.log("text.slice(-12) = " + text.slice(-12));
+console.log("text.slice(-12, -6) = " + text.slice(-12, -6));
+console.log("text.substring(7, 13) = " + text.substring(7, 13));
+console.log("text.substring(-12) = " + text.substring(-12));
+console.log("text.substr(7, 6) = " + text.substr(7, 6));
+console.log("text.substr(-4) = " + text.substr(-4));
