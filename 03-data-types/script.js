@@ -52,3 +52,22 @@ console.log("text.substring(7, 13) = " + text.substring(7, 13));
 console.log("text.substring(-12) = " + text.substring(-12));
 console.log("text.substr(7, 6) = " + text.substr(7, 6));
 console.log("text.substr(-4) = " + text.substr(-4));
+
+text = "Please visit Microsoft at the Microsoft Campus!";
+let newText = text.replace("Microsoft", "Google");
+console.log(newText);
+let newText2 = text.replace("MICROSOFT", "Google");
+console.log(newText2);
+let newText3 = text.replace(/MICROSOFT/i, "Google");
+console.log(newText3);
+let newText4 = text.replace(/Microsoft/g, "Google");
+console.log(newText4);
+let newText5 = text.replaceAll("Microsoft", "Google");
+console.log(newText5);
+let newText6 = text.replaceAll(/Microsoft/g, "Google");
+console.log(newText6);
+
+text = "Hello World!";
+console.log("text.toUpperCase() = " + text.toUpperCase());
+console.log("text.toLowerCase() = " + text.toLowerCase());
+console.log("original text = " + text);

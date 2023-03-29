@@ -65,6 +65,23 @@
         <p style="margin: 0">console.log("text.substring(-12) = " + text.substring(-12))</p>
         <p style="margin-bottom: 0">console.log("text.substr(7, 6) = " + text.substr(7, 6))</p>
         <p style="margin: 0">console.log("text.substr(-4) = " + text.substr(-4))</p>
+        <p style="margin-bottom: 0">text = "Please visit Microsoft at the Microsoft Campus!"</p>
+        <p style="margin: 0">let newText = text.replace("Microsoft", "Google")</p>
+        <p style="margin: 0">console.log(newText)</p>
+        <p style="margin: 0">let newText2 = text.replace("MICROSOFT", "Google")</p>
+        <p style="margin: 0">console.log(newText2)</p>
+        <p style="margin: 0">let newText3 = text.replace(/MICROSOFT/i, "Google")</p>
+        <p style="margin: 0">console.log(newText3)</p>
+        <p style="margin: 0">let newText4 = text.replace(/Microsoft/g, "Google")</p>
+        <p style="margin: 0">console.log(newText4)</p>
+        <p style="margin: 0">let newText5 = text.replaceAll("Microsoft", "Google")</p>
+        <p style="margin: 0">console.log(newText5)</p>
+        <p style="margin: 0">let newText6 = text.replaceAll(/Microsoft/g, "Google")</p>
+        <p style="margin: 0">console.log(newText6)</p>
+        <p style="margin-bottom: 0">text = "Hello World!"</p>
+        <p style="margin: 0">console.log("text.toUpperCase() = " + text.toUpperCase())</p>
+        <p style="margin: 0">console.log("text.toLowerCase() = " + text.toLowerCase())</p>
+        <p style="margin: 0">console.log("original text = " + text)</p>
 
         <script src="./script.js"></script>
     </body>
