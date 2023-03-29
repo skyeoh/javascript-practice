@@ -6,18 +6,52 @@
     </head>
 
     <body>
+        <h1>JavaScript Data Types</h1>
 
 
 
         <h2>Strings</h2>
 
-        <p>Single vs. double quotes:</p>
+        <h3>Single vs. double quotes:</h3>
         <p style="margin: 0">const sgl = '<span id="sgl"></span>'</p>
         <p style="margin: 0">const dbl = "<span id="dbl"></span>"</p>
         <p style="margin: 0">const sglDbl = '<span id="sglDbl"></span>'</p>
         <p style="margin: 0">const dblSgl = "<span id="dblSgl"></span>"</p>
         <p style="margin: 0">const sglSgl = '<span id="sglSgl"></span>'</p>
         <p style="margin: 0">const dblDbl = "<span id="dblDbl"></span>"</p>
+
+        <h3>String concatenation:</h3>
+        <p style="margin: 0">Template literal:</p>
+        <p style="margin: 0">const name = "Michael"</p>
+        <p style="margin: 0">const greeting = `Hello, ${name}` = `<span id="temp-lit"></span>`</p>
+        <p style="margin-bottom: 0">const greeting2 = "Hello"</p>
+        <p style="margin: 0">const name2 = "Anthony"</p>
+        <p style="margin: 0">
+            const message = greeting2 + ", " + name2 = "<span id="concat-plus"></span>"
+        </p>
+        <p style="margin: 0">
+            const message2 = `${greeting2}, ${name2}` = "<span id="concat-temp-lit"></span>"
+        </p>
+
+        <h3>Expressions in strings:</h3>
+        <p style="margin: 0">const song = "Fight the Youth"</p>
+        <p style="margin: 0">const score = 9</p>
+        <p style="margin: 0">const highestScore = 10</p>
+        <p style="margin: 0">
+            const output = `I like the song ${song}. I gave it a score of ${
+                (score / highestScore) * 100
+            }%.`
+        </p>
+        <p style="margin: 0">= "<span id="expr-in-strings"></span>"</p>
+
+        <h3>Multiline strings:</h3>
+        <p style="margin: 0">const multilineString1 = `I like the song.</p>
+        <p style="margin: 0">I gave it a score of 90%.`</p>
+        <p style="margin: 0">
+            const multilineString2 = "I like the song.\n
+            I gave it a score of 90%."
+        </p>
+        <p style="margin: 0">See console for output.</p>
 
 
 
