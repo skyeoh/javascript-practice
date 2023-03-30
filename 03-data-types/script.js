@@ -84,3 +84,16 @@ console.log("text1 = " + text1);
 console.log("text1.trim() = " + text1.trim());
 console.log("text1.trimStart() = " + text1.trimStart());
 console.log("text1.trimEnd() = " + text1.trimEnd());
+
+let text2 = "51";
+console.log("text2 = " + text2);
+console.log("text2.padStart(10, \"XO\") = " + text2.padStart(10, "XO"));    // "XOXOXOXO51"
+console.log("text2.padEnd(10, \"XO\") = " + text2.padEnd(10, "XO"));        // "51XOXOXOXO"
+
+console.log("text = " + text);
+console.log("text.charAt(0) = " + text.charAt(0));
+console.log("text.charAt(6) = " + text.charAt(6));
+console.log("text.charCodeAt(0) = " + text.charCodeAt(0));
+console.log("text.charCodeAt(6) = " + text.charCodeAt(6));
+console.log("text[0] = " + text[0]);
+console.log("text[6] = " + text[6]);
