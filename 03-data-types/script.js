@@ -71,3 +71,16 @@ text = "Hello World!";
 console.log("text.toUpperCase() = " + text.toUpperCase());
 console.log("text.toLowerCase() = " + text.toLowerCase());
 console.log("original text = " + text);
+
+let joinedString = text.concat(" ", newText, " Apple Campus looks better. ", newText2);
+console.log(joinedString);
+let joinedString1 = text + " " + newText + " Apple Campus looks better. " + newText2;
+console.log(joinedString1);
+let joinedString2 = `${text}${" "}${newText}${" Apple Campus looks better. "}${newText2}`;
+console.log(joinedString2);
+
+let text1 = "     Hello World!     ";
+console.log("text1 = " + text1);
+console.log("text1.trim() = " + text1.trim());
+console.log("text1.trimStart() = " + text1.trimStart());
+console.log("text1.trimEnd() = " + text1.trimEnd());
