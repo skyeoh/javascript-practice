@@ -97,3 +97,13 @@ console.log("text.charCodeAt(0) = " + text.charCodeAt(0));
 console.log("text.charCodeAt(6) = " + text.charCodeAt(6));
 console.log("text[0] = " + text[0]);
 console.log("text[6] = " + text[6]);
+
+let string1 = "tiger, lion, cheetah, puma, jaguar, leopard";
+let string2 = "tiger lion cheetah puma jaguar leopard";
+let string3 = "tiger | lion | cheetah | puma | jaguar | leopard";
+console.log(string1.split(","));
+console.log(string2.split(" "));
+console.log(string3.split("|"));
+let string4 = "panther,     ocelot";
+console.log(string4.split());
+console.log(string4.split(""));
