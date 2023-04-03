@@ -37,3 +37,11 @@ console.log(null >= 0);          // true
 console.log(undefined > 0);      // false
 console.log(undefined < 0);      // false
 console.log(undefined == 0);     // false
+
+console.log("5 > 4: " + (5 > 4));                                   // true: 5 is larger than 4
+console.log('"apple" > "pineapple": ' + ("apple" > "pineapple"));   // false: First character 'a' is smaller than 'p'
+console.log('"2" > "12": ' + ("2" > "12"));                         // true: First character '2' is greater than '1'
+console.log("undefined == null: " + (undefined == null));           // true: undefined, null are only equal to one another based on loose equality '=='
+console.log("undefined === null: " + (undefined === null));         // false: undefined and null are different types
+console.log('null == "\n0\n": ' + (null == "\n0\n"));               // false: undefined, null are only equal to one another based on loose equality '=='
+console.log('null === +"\n0\n": ' + (null === +"\n0\n"));           // false: they are different types; one is null and the other is a number
