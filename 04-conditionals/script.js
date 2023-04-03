@@ -16,3 +16,15 @@ let chara = 'a',
     charA = 'A';
 console.log("unicode of 'a' = " + chara.charCodeAt(0));
 console.log("unicode of 'A' = " + charA.charCodeAt(0));
+
+console.log('2' > 1 );      // true
+console.log('001' == 1);    // true
+console.log(true == 1);     // true
+console.log(false == '');   // true
+
+console.log(0 == false);    // true
+console.log('' == false);   // true
+console.log('' == 0);       // true
+console.log(0 === false);   // false
+console.log('' === false);  // false
+console.log('' === 0);      // false
