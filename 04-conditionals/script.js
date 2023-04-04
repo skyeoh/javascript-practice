@@ -45,3 +45,23 @@ console.log("undefined == null: " + (undefined == null));           // true: und
 console.log("undefined === null: " + (undefined === null));         // false: undefined and null are different types
 console.log('null == "\n0\n": ' + (null == "\n0\n"));               // false: undefined, null are only equal to one another based on loose equality '=='
 console.log('null === +"\n0\n": ' + (null === +"\n0\n"));           // false: they are different types; one is null and the other is a number
+
+function calculateOutputValue() {
+    const textInput = document.getElementById("text-input-conditional").value;
+    const inputNumber = Number(textInput);
+    let outputText;
+
+    if (inputNumber < 0) {
+        outputText = `The number you entered ${inputNumber} is less than 0.`;
+    } else if (inputNumber < 10) {
+        outputText = `The number you entered ${inputNumber} is [0, 10).`;
+    } else if (inputNumber < 50) {
+        outputText = `The number you entered ${inputNumber} is [10, 50).`;
+    } else if (inputNumber < 100) {
+        outputText = `The number you entered ${inputNumber} is [50, 100).`;
+    } else {
+        outputText = `The number you entered ${inputNumber} is 100 or larger.`;
+    }
+
+    document.getElementById("text-output-conditional").textContent = outputText;
+}
