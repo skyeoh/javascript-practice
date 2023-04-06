@@ -67,6 +67,22 @@
         <button onclick="calculateOutputValue()">Enter</button>
         <p>Output: <span id="text-output-conditional"></span></p>
 
+        <h2>Logical operators</h2>
+
+        <h3>OR</h3>
+        <p style="margin: 0">true || true = <span id="logical-or-1"></span></p>
+        <p style="margin: 0">true || false = <span id="logical-or-2"></span></p>
+        <p style="margin: 0">false || true = <span id="logical-or-3"></span></p>
+        <p style="margin: 0">false || false = <span id="logical-or-4"></span></p>
+        <p style="margin: 0">
+            '' || null || undefined || console.log(1) || !console.log(2) || console.log(3) || console.log(4)
+            = <span id="logical-or-truthy-1"></span>
+        </p>
+        <p style="margin: 0">
+            '' || null || undefined || console.log(1) || console.log(2) || !console.log(3) || console.log(4)
+            = <span id="logical-or-truthy-2"></span>
+        </p>
+
         <h2>Miscellaneous</h2>
 
         <h3>The &lt;input&gt; element</h3>

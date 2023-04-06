@@ -65,3 +65,17 @@ function calculateOutputValue() {
 
     document.getElementById("text-output-conditional").textContent = outputText;
 }
+
+let boolValueOr = true || true;
+document.getElementById("logical-or-1").innerHTML = boolValueOr;
+boolValueOr = true || false;
+document.getElementById("logical-or-2").innerHTML = boolValueOr;
+boolValueOr = false || true;
+document.getElementById("logical-or-3").innerHTML = boolValueOr;
+boolValueOr = false || false;
+document.getElementById("logical-or-4").innerHTML = boolValueOr;
+
+let returnValOr = '' || null || undefined || console.log(1) || !console.log(2) || console.log(3) || console.log(4);
+document.getElementById("logical-or-truthy-1").innerHTML = returnValOr;
+returnValOr = '' || null || undefined || console.log(1) || console.log(2) || !console.log(3) || console.log(4);
+document.getElementById("logical-or-truthy-2").innerHTML = returnValOr;
