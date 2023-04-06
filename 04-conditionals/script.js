@@ -79,3 +79,5 @@ let returnValOr = '' || null || undefined || console.log(1) || !console.log(2) |
 document.getElementById("logical-or-truthy-1").innerHTML = returnValOr;
 returnValOr = '' || null || undefined || console.log(1) || console.log(2) || !console.log(3) || console.log(4);
 document.getElementById("logical-or-truthy-2").innerHTML = returnValOr;
+returnValOr = '' || null || undefined || console.log(1) || console.log(2) || console.log(3) || console.log(4);
+document.getElementById("logical-or-truthy-3").innerHTML = returnValOr;
