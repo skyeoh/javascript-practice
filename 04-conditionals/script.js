@@ -98,3 +98,12 @@ returnValAnd = 'Hello world!' && !console.log(1) && 100 && !console.log(2) && 0 
 document.getElementById("logical-and-truthy-2").innerHTML = returnValAnd;
 returnValAnd = 'Hello world!' && !console.log(1) && 100 && !console.log(2) && true && 20*Number(!console.log(3));
 document.getElementById("logical-and-truthy-3").innerHTML = returnValAnd;
+
+let resultNot = !20.5;
+document.getElementById("logical-not-1").innerHTML = resultNot;
+resultNot = !null;
+document.getElementById("logical-not-2").innerHTML = resultNot;
+resultNot = !undefined;
+document.getElementById("logical-not-3").innerHTML = resultNot;
+resultNot = !"Hello world";
+document.getElementById("logical-not-4").innerHTML = resultNot;
