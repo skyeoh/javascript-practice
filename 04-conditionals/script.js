@@ -81,3 +81,20 @@ returnValOr = '' || null || undefined || console.log(1) || console.log(2) || !co
 document.getElementById("logical-or-truthy-2").innerHTML = returnValOr;
 returnValOr = '' || null || undefined || console.log(1) || console.log(2) || console.log(3) || console.log(4);
 document.getElementById("logical-or-truthy-3").innerHTML = returnValOr;
+
+let boolValueAnd = true && true;
+document.getElementById("logical-and-1").innerHTML = boolValueAnd;
+boolValueAnd = true && false;
+document.getElementById("logical-and-2").innerHTML = boolValueAnd;
+boolValueAnd = false && true;
+document.getElementById("logical-and-3").innerHTML = boolValueAnd;
+boolValueAnd = false && false;
+document.getElementById("logical-and-4").innerHTML = boolValueAnd;
+
+console.log("--------------------");
+let returnValAnd = 'Hello world!' && !console.log(1) && 100 && console.log(2) && 0 && !console.log(3);
+document.getElementById("logical-and-truthy-1").innerHTML = returnValAnd;
+returnValAnd = 'Hello world!' && !console.log(1) && 100 && !console.log(2) && 0 && !console.log(3);
+document.getElementById("logical-and-truthy-2").innerHTML = returnValAnd;
+returnValAnd = 'Hello world!' && !console.log(1) && 100 && !console.log(2) && true && 20*Number(!console.log(3));
+document.getElementById("logical-and-truthy-3").innerHTML = returnValAnd;
