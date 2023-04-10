@@ -18,8 +18,7 @@
             let shoppingDone = false;
 
             checkBox.addEventListener("change", () => {
-                checkBox.disabled = true;
-                shoppingDone = true;
+                shoppingDone = !shoppingDone;
                 updateAllowance();
             });
 
