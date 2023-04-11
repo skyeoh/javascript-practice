@@ -4,6 +4,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Weather-dependent advice</title>
+
+        <style>
+            p {
+                display: inline;
+                padding: 8px;
+            }
+
+            div {
+                margin-top: 16px;
+            }
+        </style>
     </head>
 
     <body>
@@ -16,7 +27,9 @@
             <option value="overcast">Overcast</option>
         </select>
 
-        <p></p>
+        <div>
+            <p></p>
+        </div>
 
         <script>
             const select = document.querySelector("select");
@@ -29,14 +42,29 @@
 
                 if (choice === "sunny") {
                     para.textContent = "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
+                    para.style.backgroundColor = "yellow";
+                    para.style.color = "red";
+                    para.style.border = "1px solid red";
                 } else if (choice === "rainy") {
                     para.textContent = "Rain is falling outside; take a rain coat and a brolly, and don't stay out for too long.";
+                    para.style.backgroundColor = "lightblue";
+                    para.style.color = "darkblue";
+                    para.style.border = "1px solid darkblue";
                 } else if (choice === "snowing") {
                     para.textContent = "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
+                    para.style.backgroundColor = "snow";
+                    para.style.color = "gray";
+                    para.style.border = "1px solid gray";
                 } else if (choice === "overcast") {
                     para.textContent = "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
+                    para.style.backgroundColor = "lightgray";
+                    para.style.color = "black";
+                    para.style.border = "1px solid black";
                 } else {
                     para.textContent = "";
+                    para.style.backgroundColor = "";
+                    para.style.color = "";
+                    para.style.border = "";
                 }
             }
         </script>
