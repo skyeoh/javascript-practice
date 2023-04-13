@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Various tasks</title>
+    </head>
+
+    <body>
+        <button id="javascript-name">Press here for question!</button>
+
+        <script>
+            buttonJavaScriptName = document.getElementById("javascript-name");
+            buttonJavaScriptName.addEventListener("click", promptJavaScriptName);
+
+            function promptJavaScriptName() {
+                const javaScriptName = prompt("What's the \"official\" name of JavaScript?");
+                if (javaScriptName === "ECMAScript") {
+                    alert("Right!");
+                } else {
+                    alert("You don't know? ECMAScript!");
+                }
+            }
+        </script>
+    </body>
+</html>
