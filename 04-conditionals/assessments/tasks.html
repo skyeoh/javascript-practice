@@ -9,6 +9,13 @@
     <body>
         <button id="javascript-name">Press here for question!</button>
 
+        <div>
+            <button id="request-number"
+                    style="margin-top: 12px">
+                Press here for another question!
+            </button>
+        </div>
+
         <script>
             buttonJavaScriptName = document.getElementById("javascript-name");
             buttonJavaScriptName.addEventListener("click", promptJavaScriptName);
@@ -19,6 +26,20 @@
                     alert("Right!");
                 } else {
                     alert("You don't know? ECMAScript!");
+                }
+            }
+
+            buttonRequestNumber = document.getElementById("request-number");
+            buttonRequestNumber.addEventListener("click", promptForNumber);
+
+            function promptForNumber() {
+                const number = Number(prompt("Enter a number:"));
+                if (number > 0) {
+                    alert(1);
+                } else if (number < 0) {
+                    alert(-1);
+                } else {
+                    alert(0);
                 }
             }
         </script>
