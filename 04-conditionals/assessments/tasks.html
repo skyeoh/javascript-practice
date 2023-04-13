@@ -8,7 +8,7 @@
         <style>
             button {
                 display: block;
-                margin-top: 12px;
+                margin: 16px 0;
             }
         </style>
     </head>
@@ -18,10 +18,13 @@
 
         <button id="request-number">Press here for another question!</button>
 
-        <button id="request-two-numbers">Press here for even more questions!</button>
+        <button id="request-two-numbers">Press here for one more question!</button>
+
+        <input type="text" placeholder="Enter login" id="login-text">
+        <input type="button" value="Enter" id="login-button">
 
         <script>
-            buttonJavaScriptName = document.getElementById("javascript-name");
+            const buttonJavaScriptName = document.getElementById("javascript-name");
             buttonJavaScriptName.addEventListener("click", promptJavaScriptName);
 
             function promptJavaScriptName() {
@@ -33,7 +36,7 @@
                 }
             }
 
-            buttonRequestNumber = document.getElementById("request-number");
+            const buttonRequestNumber = document.getElementById("request-number");
             buttonRequestNumber.addEventListener("click", promptForNumber);
 
             function promptForNumber() {
@@ -47,7 +50,7 @@
                 }
             }
 
-            buttonRequestTwoNumbers = document.getElementById("request-two-numbers");
+            const buttonRequestTwoNumbers = document.getElementById("request-two-numbers");
             buttonRequestTwoNumbers.addEventListener("click", promptForTwoNumbers);
 
             function promptForTwoNumbers() {
@@ -56,6 +59,18 @@
                 const result = (a + b < 4) ? 'Below' : 'Over';
                 alert(result);
             }
+
+            const loginText = document.getElementById("login-text");
+            const loginButton = document.getElementById("login-button");
+            loginButton.addEventListener("click", () => {
+                const login = loginText.value;
+                const message = (login === 'Employee') ? 'Hello'
+                                : (login === 'Director') ? 'Greetings'
+                                : (login === '') ? 'No login'
+                                : '';
+                alert(message);
+            });
+
         </script>
     </body>
 </html>
