@@ -16,6 +16,13 @@
             </button>
         </div>
 
+        <div>
+            <button id="request-two-numbers"
+                    style="margin-top: 12px">
+                Press here for even more questions!
+            </button>
+        </div>
+
         <script>
             buttonJavaScriptName = document.getElementById("javascript-name");
             buttonJavaScriptName.addEventListener("click", promptJavaScriptName);
@@ -41,6 +48,16 @@
                 } else {
                     alert(0);
                 }
+            }
+
+            buttonRequestTwoNumbers = document.getElementById("request-two-numbers");
+            buttonRequestTwoNumbers.addEventListener("click", promptForTwoNumbers);
+
+            function promptForTwoNumbers() {
+                const a = Number(prompt("Enter a number:"));
+                const b = Number(prompt("Enter another number:"));
+                const result = (a + b < 4) ? 'Below' : 'Over';
+                alert(result);
             }
         </script>
     </body>
