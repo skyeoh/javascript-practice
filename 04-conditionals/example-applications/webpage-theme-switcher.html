@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Webpage theme switcher</title>
+
+        <style>
+            h2 {
+                margin: 0;
+            }
+
+            div {
+                width: 250px;
+                height: 250px;
+                padding: 16px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="dual-theme">
+            <label for="dual-theme">Select theme:</label>
+            <select id="dual-theme" class="dual-theme">
+                <option value="light" selected>Light</option>
+                <option value="dark">Dark</option>
+            </select>
+
+            <h2 class="dual-theme"></h2>
+        </div>
+
+        <script>
+            const selectDualTheme = document.querySelector("select.dual-theme");
+            const bgDualTheme = document.querySelector("div.dual-theme");
+            const textDualTheme = document.querySelector("h2.dual-theme");
+
+            selectDualTheme.addEventListener("change", () => {
+                selectDualTheme.value === "dark" ? updateTheme(bgDualTheme, textDualTheme, "black", "white")
+                                                    : updateTheme(bgDualTheme, textDualTheme, "white", "black")
+            });
+
+            function updateTheme(bgElem, textElem, bgColor, textColor) {
+                bgElem.style.backgroundColor = bgColor;
+                bgElem.style.color = textColor;
+                bgElem.style.border= `1px solid ${textColor}`;
+                textElem.textContent = `This is the ${selectDualTheme.value} theme!`;
+            }
+
+            updateTheme(bgDualTheme, textDualTheme, "white", "black");
+        </script>
+    </body>
+</html>
