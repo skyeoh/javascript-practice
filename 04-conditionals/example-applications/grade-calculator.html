@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Grade calculator</title>
+
+        <style>
+            p {
+                margin-top: 16px;
+            }
+
+            button {
+                color: white;
+                background-color: royalblue;
+                font-weight: bold;
+                padding: 8px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <label for="score">Enter score:</label>
+        <input type="text" id="score">
+        <button>Enter</button>
+
+        <p></p>
+
+        <script>
+            inputElem = document.querySelector("input");
+            buttonElem = document.querySelector("button");
+            paraElem = document.querySelector("p");
+
+            buttonElem.addEventListener("click", calculateGrade);
+
+            function calculateGrade() {
+                const score = Number(inputElem.value);
+
+                paraElem.style.color = "green";
+
+                switch (true) {
+                    case score >= 90:
+                        paraElem.textContent = `Your score of ${score} is an A.`;
+                        break;
+                    case score >= 80:
+                        paraElem.textContent = `Your score of ${score} is a B.`;
+                        break;
+                    case score >= 70:
+                        paraElem.textContent = `Your score of ${score} is a C.`
+                        break;
+                    case score >= 60:
+                        paraElem.textContent = `Your score of ${score} is a D.`
+                        break;
+                    default:
+                        paraElem.textContent = `Your score of ${score} is an F.`
+                        paraElem.style.color = "red";
+                }
+            }
+        </script>
+    </body>
+</html>
