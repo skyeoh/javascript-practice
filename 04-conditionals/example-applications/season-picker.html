@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Season picker</title>
+
+        <style>
+            p,
+            div {
+                margin-top: 16px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <label for="month">Enter month (1 = January, 2 = February, ..., 12 = December):</label>
+        <div>
+            <input type="text" id="month">
+            <button>Enter</button>
+        </div>
+
+        <p></p>
+
+        <script>
+            inputElem = document.querySelector("input");
+            buttonElem = document.querySelector("button");
+            paraElem = document.querySelector("p");
+
+            buttonElem.addEventListener("click", pickSeason);
+
+            function pickSeason() {
+                const month = Number(inputElem.value);
+
+                switch (month) {
+                    case 1:
+                    case 2:
+                    case 3:
+                        paraElem.textContent = "It's winter!";
+                        paraElem.style.color = "blue";
+                        break;
+                    case 4:
+                    case 5:
+                    case 6:
+                        paraElem.textContent = "It's spring!";
+                        paraElem.style.color = "green";
+                        break;
+                    case 7:
+                    case 8:
+                    case 9:
+                        paraElem.textContent = "It's summer!";
+                        paraElem.style.color = "red";
+                        break;
+                    case 10:
+                    case 11:
+                    case 12:
+                        paraElem.textContent = "It's autumn!";
+                        paraElem.style.color = "orange";
+                        break;
+                    default:
+                        paraElem.textContent = "That's not a valid month!";
+                        paraElem.style.color = "gray";
+                }
+            }
+        </script>
+    </body>
+</html>
