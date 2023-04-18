@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Calendar</title>
+
+        <style>
+            * {
+                font-family: sans-serif;
+                box-sizing: border-box;
+            }
+
+            div {
+                --main-bg-color: lightcyan;
+                background-color: var(--main-bg-color);
+                width: 600px;
+                border: 1px solid black;
+                padding: 16px;
+            }
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            li {
+                color: white;
+                background-color: #4a2db6;
+                width: 25%;
+                border: 2px solid var(--main-bg-color);
+                padding: 4px;
+                flex: none;
+            }
+
+            li:hover {
+                background-color: #1d0574;
+                border: 2px solid black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <label for="month">Select month:</label>
+            <select id="month">
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+            </select>
+
+            <h1></h1>
+
+            <ul></ul>
+        </div>
+
+        <script>
+            select = document.querySelector("select");
+            h1 = document.querySelector("h1");
+            list = document.querySelector("ul");
+
+            function createCalendar(days, month) {
+                h1.textContent = month;
+                list.innerHTML = "";
+                for (let i = 1; i <= days; i++) {
+                    const listItem = document.createElement("li");
+                    listItem.textContent = i;
+                    list.appendChild(listItem);
+                }
+            }
+
+            createCalendar(31, "January");
+        </script>
+    </body>
+</html>
