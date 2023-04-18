@@ -71,6 +71,19 @@
             h1 = document.querySelector("h1");
             list = document.querySelector("ul");
 
+            select.addEventListener("change", () => {
+                const monthSelected = select.value;
+                let days = 31;
+
+                if (monthSelected === "February") {
+                    days = 28;
+                } else if (monthSelected === "April" || monthSelected === "June" || monthSelected === "September" || monthSelected === "November") {
+                    days = 30;
+                }
+
+                createCalendar(days, monthSelected);
+            });
+
             function createCalendar(days, month) {
                 h1.textContent = month;
                 list.innerHTML = "";
