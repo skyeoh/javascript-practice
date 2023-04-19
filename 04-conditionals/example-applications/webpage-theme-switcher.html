@@ -7,12 +7,14 @@
 
         <style>
             h2 {
+                text-align: center;
                 margin: 0;
             }
 
             div {
-                width: 250px;
-                height: 250px;
+                width: 300px;
+                height: 300px;
+                margin-bottom: 16px;
                 padding: 16px;
 
                 display: flex;
@@ -35,6 +37,19 @@
             <h2 class="dual-theme"></h2>
         </div>
 
+        <div class="multi-theme">
+            <label for="multi-theme">Select theme:</label>
+            <select id="multi-theme" class="multi-theme">
+                <option value="light" selected>Light</option>
+                <option value="dark">Dark</option>
+                <option value="michigan">Michigan</option>
+                <option value="texas">Texas</option>
+                <option value="illinois">Illinois</option>
+            </select>
+
+            <h2 class="multi-theme"></h2>
+        </div>
+
         <script>
             const selectDualTheme = document.querySelector("select.dual-theme");
             const bgDualTheme = document.querySelector("div.dual-theme");
@@ -46,6 +61,34 @@
             });
 
             updateTheme(selectDualTheme, bgDualTheme, textDualTheme, "white", "black");
+
+            const selectMultiTheme = document.querySelector("select.multi-theme");
+            const bgMultiTheme = document.querySelector("div.multi-theme");
+            const textMultiTheme = document.querySelector("h2.multi-theme");
+
+            selectMultiTheme.addEventListener("change", () => {
+                const choice = selectMultiTheme.value;
+
+                switch (choice) {
+                    case "light":
+                        updateTheme(selectMultiTheme, bgMultiTheme, textMultiTheme, "white", "black");
+                        break;
+                    case "dark":
+                        updateTheme(selectMultiTheme, bgMultiTheme, textMultiTheme, "black", "white");
+                        break;
+                    case "michigan":
+                        updateTheme(selectMultiTheme, bgMultiTheme, textMultiTheme, "#00274C", "#FFCB05");
+                        break;
+                    case "texas":
+                        updateTheme(selectMultiTheme, bgMultiTheme, textMultiTheme, "#BF5700", "#FFFFFF");
+                        break;
+                    case "illinois":
+                        updateTheme(selectMultiTheme, bgMultiTheme, textMultiTheme, "#13294B", "#FF5F05");
+                        break;
+                }
+            });
+
+            updateTheme(selectMultiTheme, bgMultiTheme, textMultiTheme, "white", "black");
 
             function updateTheme(selectElem, bgElem, textElem, bgColor, textColor) {
                 bgElem.style.backgroundColor = bgColor;
