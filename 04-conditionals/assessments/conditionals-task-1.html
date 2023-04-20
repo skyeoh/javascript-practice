@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Conditionals: Task 1</title>
+
+        <style>
+            p {
+                color: purple;
+                font-size: 1.5em;
+                margin: 0.5em 0;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section class="preview"></section>
+
+        <script>
+            const season = prompt('Enter a season:');
+            let response;
+
+            if (season === 'summer') {
+                response = 'It\'s summer! Time for t-shirts and shorts, but don\'t forget the hat, shades and sunscreen!';
+            } else if (season === 'winter') {
+                response = 'Brrr, it\'s winter! It\'s going to be cold and snowy so grab your warm winter jacket, scarf and snow boots!';
+            }
+            else {
+                response = 'Not sure what season it is.';
+            }
+
+            const section = document.querySelector('.preview');
+            section.innerHTML = '';
+            const para1 = document.createElement('p');
+            para1.textContent = response;
+            section.appendChild(para1);
+        </script>
+    </body>
+</html>
