@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Odin JavaScript Fundamentals 2 - Exercise 2</title>
+
+        <style>
+            p {
+                color: purple;
+                font-size: 1.5rem;
+                margin: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Odin JavaScript Fundamentals 2 - Exercise 2</h1>
+
+        <section></section>
+
+        <script src="./odin-exercise-2-script.js"></script>
+
+        <script>
+			let numCorrect = 0;
+			let numChecked = 0;
+
+            const section = document.querySelector('section');
+
+			const result = numberChecker();
+            section.appendChild(document.createElement('p')).textContent = `You entered: ${number}, and got result: ${result}`;
+
+            /******** Run tests ********/
+            section.appendChild(document.createElement('h2')).textContent = "Test Results:";
+
+            function checkNumberChecker(num) {
+                number = num;
+                const result = numberChecker();
+
+                if ((result === true && number >= 10) || (result === false && number < 10)) {
+                    numCorrect++;
+                    section.appendChild(document.createElement('p')).textContent = `If I enter ${number}, the result is ${result}. This is correct!`;
+                } else {
+                    section.appendChild(document.createElement('p')).textContent = `I entered "${number}", and got "${result}" as a result, I should have gotten "${number >= 10}" instead`;
+                }
+
+                numChecked++;
+            }
+
+            checkNumberChecker(2);
+            checkNumberChecker(12);
+            checkNumberChecker(6);
+            checkNumberChecker(10);
+            checkNumberChecker(9);
+
+            const testResults = document.createElement('p');
+            if(numCorrect === numChecked) {
+                testResults.textContent = "You've passed all the tests, continue to the next lesson!";
+                testResults.style.color = "green";
+            } else {
+                testResults.textContent = `You have failed ${numChecked - numCorrect} out of ${numChecked}, please try again`;
+                testResults.style.color = "red";
+            }
+            testResults.style.margin = "1rem 0";
+            section.appendChild(testResults);
+        </script>
+    </body>
+</html>
