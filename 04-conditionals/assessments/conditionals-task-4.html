@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Conditionals: Task 4</title>
+
+        <style>
+            p {
+                color: purple;
+                font-size: 1.5em;
+                margin: 0.5em 0;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            div {
+                margin: 0.5em 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <label for="machine-switch">Turn machine on:</label>
+        <input type="checkbox" id="machine-switch">
+
+        <div>
+            <label for="password">Enter password:</label>
+            <input type="text" id="password">
+            <button>Enter</button>
+        </div>
+
+        <section class="preview"></section>
+
+        <script>
+            let machineActive =  false;
+            let pwd;
+
+            let machineResult;
+            let pwdResult;
+
+            const machineSwitch = document.querySelector('input#machine-switch');
+            const pwdInput = document.querySelector('input#password');
+            const button = document.querySelector('button');
+
+            machineSwitch.addEventListener('change', () => {
+                machineActive = !machineActive;
+            });
+
+            button.addEventListener('click', () => {
+                pwd = pwdInput.value;
+
+                if (machineActive) {
+                    machineResult = 'The machine is on. So you\'re good.';
+                    pwdResult = (pwd === 'cheese') ? 'Login successful!'
+                                                   : 'Login failed. Please try again.';
+                } else {
+                    machineResult = 'The machine is off. Please turn it on.';
+                    pwdResult = '';
+                }
+
+                generateMessages();
+            });
+
+            function generateMessages() {
+                const section = document.querySelector('section');
+                section.innerHTML = '';
+
+                const para1 = document.createElement('p');
+                const para2 = document.createElement('p');
+
+                para1.textContent = machineResult;
+                para2.textContent = pwdResult;
+
+                section.appendChild(para1);
+                section.appendChild(para2);
+            }
+        </script>
+    </body>
+</html>
