@@ -17,3 +17,11 @@ const para2 = document.querySelector("p.func-expression");
 textBox2.addEventListener('keydown', function(event) {
     para2.textContent = `You pressed "${event.key}".`;
 });
+
+/***** Arrow function expression *****/
+const textBox3 = document.querySelector("input#arrow-func");
+const para3 = document.querySelector("p.arrow-func");
+
+textBox3.addEventListener('keydown', (event) => {
+    para3.textContent = `You pressed "${event.key}".`;
+});
