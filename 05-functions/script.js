@@ -9,3 +9,11 @@ textBox1.addEventListener('keydown', logKey);
 function logKey(event) {
     para1.textContent = `You pressed "${event.key}".`;
 }
+
+/***** Function expression/anonymous function *****/
+const textBox2 = document.querySelector("input#func-expression");
+const para2 = document.querySelector("p.func-expression");
+
+textBox2.addEventListener('keydown', function(event) {
+    para2.textContent = `You pressed "${event.key}".`;
+});
