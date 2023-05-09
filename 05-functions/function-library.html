@@ -59,6 +59,10 @@
                 return x2;
             }
 
+            function circleCircumference(radius) {
+                return 2 * Math.PI * radius;
+            }
+
             input.addEventListener('change', () => {
                 const num = parseInt(input.value);
 
@@ -68,7 +72,8 @@
                     para.textContent = `${num} squared is ${squared(num)}. `;
                     para.textContent += `${num} cubed is ${cubed(num)}. `;
                     para.textContent += `The factorial of ${num} is ${factorial(num)}. `
-                    para.textContent += `The square root of ${num} is ${squareRoot(num)}.`;
+                    para.textContent += `The square root of ${num} is ${squareRoot(num)}. `
+                    para.textContent += `A circle of radius ${num} has a circumference of ${circleCircumference(num)}.`;
                 }
             });
         </script>
