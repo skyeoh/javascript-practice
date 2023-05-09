@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Functions: Task 1</title>
+
+        <style>
+            p {
+                color: purple;
+                margin: 0.5em 0;
+                font-size: 2em;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <button>Click to generate a random name</button>
+
+        <section class="preview"></section>
+
+        <script>
+            const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+            const para = document.createElement('p');
+
+            // Add your code here
+
+            const button = document.querySelector('button');
+            const arrayLength = names.length;
+
+            button.addEventListener('click', () => {
+                para.textContent = chooseName();
+            });
+
+            function chooseName() {
+                return names[getRandomInt(0, arrayLength)];
+            }
+
+            function getRandomInt(min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min) + min);
+                // The maximum is exclusive and the minimum is inclusive
+            }
+
+            // Don't edit the code below here!
+
+            const section = document.querySelector('section');
+
+            section.innerHTML = '';
+            section.appendChild(para);
+        </script>
+    </body>
+</html>
