@@ -25,3 +25,15 @@ const para3 = document.querySelector("p.arrow-func");
 textBox3.addEventListener('keydown', (event) => {
     para3.textContent = `You pressed "${event.key}".`;
 });
+
+/***** Parameters and arguments *****/
+const sectionParametersArguments = document.querySelector("section.parameters-arguments");
+
+function showMessage(from, text = "no text given") {
+    sectionParametersArguments.appendChild(document.createElement("p")).textContent = from + " : " + text;
+}
+
+showMessage();
+showMessage("Ann");
+showMessage(undefined, undefined);
+showMessage("Ann", "Hello world!");
