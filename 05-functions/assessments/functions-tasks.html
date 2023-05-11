@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Functions: Tasks from JavaScript.info</title>
+    </head>
+
+    <body>
+
+        <section class="task-2"></section>
+
+        <script>
+            /***** Task 2: Rewrite the function using '?' or '||' *****/
+
+            const age = prompt("What is your age?");
+            const sectionTask2 = document.querySelector("section.task-2");
+
+            // A) Using function
+            function checkAge(age) {
+                if (age > 18) {
+                    return true;
+                } else {
+                    return confirm('Did parents allow you?');
+                }
+            }
+
+            const resultFunction = checkAge(age);
+
+            const paraFunction = document.createElement("p");
+            paraFunction.textContent = resultFunction ? 'You are okay!' : 'You are under age!';
+            sectionTask2.appendChild(paraFunction);
+
+            // B) Using '?'
+            const resultTernary = (age > 18) ? true : confirm('Did parents allow you?');
+
+            const paraTernary = document.createElement("p");
+            paraTernary.textContent = resultTernary ? 'You are okay!' : 'You are under age!';
+            sectionTask2.appendChild(paraTernary);
+
+            // C) Using '||'
+            const resultOR = (age > 18) || confirm('Did parents allow you?');
+
+            const paraOR = document.createElement("p");
+            paraOR.textContent = resultOR ? 'You are okay!' : 'You are under age!';
+            sectionTask2.appendChild(paraOR);
+        </script>
+    </body>
+</html>
