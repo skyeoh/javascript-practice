@@ -7,8 +7,13 @@
     </head>
 
     <body>
+        <h1>Tasks: Functions</h1>
 
+        <h2>Task 2</h2>
         <section class="task-2"></section>
+
+        <h2>Task 3</h2>
+        <section class="task-3"></section>
 
         <script>
             /***** Task 2: Rewrite the function using '?' or '||' *****/
@@ -44,6 +49,21 @@
             const paraOR = document.createElement("p");
             paraOR.textContent = resultOR ? 'You are okay!' : 'You are under age!';
             sectionTask2.appendChild(paraOR);
+
+
+            /***** Task 3: Function min(a, b) *****/
+
+            const number1 = Number(prompt("Enter a number"));
+            const number2 = Number(prompt("Enter another number"));
+
+            function min(a, b) {
+                return (a < b) ? a : b;
+            }
+
+            const sectionTask3 = document.querySelector("section.task-3");
+            const paraMin = document.createElement("p");
+            paraMin.textContent = "Between " + number1 + " and " + number2 + ", " + min(number1, number2) + " is smaller.";
+            sectionTask3.appendChild(paraMin);
         </script>
     </body>
 </html>
