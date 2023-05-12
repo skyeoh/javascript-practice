@@ -15,6 +15,9 @@
         <h2>Task 3</h2>
         <section class="task-3"></section>
 
+        <h2>Task 4</h2>
+        <section class="task-4"></section>
+
         <script>
             /***** Task 2: Rewrite the function using '?' or '||' *****/
 
@@ -64,6 +67,29 @@
             const paraMin = document.createElement("p");
             paraMin.textContent = "Between " + number1 + " and " + number2 + ", " + min(number1, number2) + " is smaller.";
             sectionTask3.appendChild(paraMin);
+
+
+            /***** Task 4: Function pow(x, n) *****/
+
+            const num = Number(prompt("Enter an integer"));
+            const exp = Number(prompt("Enter an exponent (integers >= 1)"));
+
+            function pow(x, n) {
+                let result = x;
+                for (let i = 1; i < n; i++) {
+                    result *= x;
+                }
+                return result;
+            }
+
+            if (exp < 1) {
+                alert(`Power ${exp} is not supported; use only integers >= 1.`);
+            } else {
+                const sectionTask4 = document.querySelector("section.task-4");
+                const paraPow = document.createElement("p");
+                paraPow.textContent = `${num} to the power of ${exp} is equal to ${pow(num, exp)}.`;
+                sectionTask4.appendChild(paraPow);
+            }
         </script>
     </body>
 </html>
