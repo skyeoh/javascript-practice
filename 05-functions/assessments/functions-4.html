@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Functions: Task 4</title>
+
+        <style>
+            p {
+                color: purple;
+                margin: 0.5em 0;
+                font-size: 2em;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <input type="text" placeholder="Enter an integer">
+
+        <section class="preview"></section>
+
+        <script>
+            const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+            const para = document.createElement('p');
+
+            // Add your code here
+
+            const input = document.querySelector('input');
+
+            input.addEventListener('change', () => {
+                //const shortNames = names.filter(isShort);
+                const shortNames = names.filter(name => name.length < input.value);
+                para.textContent = shortNames;
+            });
+
+            function isShort(name) {
+                return name.length < input.value;
+            }
+
+            // Don't edit the code below here!
+
+            const section = document.querySelector('section');
+
+            section.innerHTML = '';
+            section.appendChild(para);
+        </script>
+    </body>
+</html>
