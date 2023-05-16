@@ -9,6 +9,12 @@
             p {
                 color: purple;
                 font-size: 2rem;
+                margin: 0;
+            }
+
+            section {
+                height: 2rem;
+                margin-top: 0.5rem;
             }
         </style>
     </head>
@@ -19,6 +25,11 @@
         <h2>Exercise 1: add7(...)</h2>
         <input type="text" placeholder="Enter an integer" class="exercise-1">
         <section class="exercise-1"></section>
+
+        <h2>Exercise 2: multiply(...)</h2>
+        <input type="text" placeholder="Enter two numbers, separated by a comma"
+               class="exercise-2" size="30px">
+        <section class="exercise-2"></section>
 
         <script>
 
@@ -35,6 +46,24 @@
                 const inputValue = Number(input1.value);
                 section1.innerHTML = '';
                 section1.appendChild(document.createElement('p')).textContent = add7(inputValue);
+            });
+
+
+            /***** Exercise 2 *****/
+
+            function multiply(a, b) {
+                return a * b;
+            }
+
+            const input2 = document.querySelector("input.exercise-2");
+            const section2 = document.querySelector("section.exercise-2");
+
+            input2.addEventListener('change', () => {
+                const inputValue = input2.value.split(',');
+                const num1 = inputValue[0];
+                const num2 = inputValue[1];
+                section2.innerHTML = '';
+                section2.appendChild(document.createElement('p')).textContent = multiply(num1, num2);
             });
         </script>
     </body>
