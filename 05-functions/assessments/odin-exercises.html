@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Odin JavaScript Fundamentals 3 - Exercises</title>
+
+        <style>
+            p {
+                color: purple;
+                font-size: 2rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>JavaScript Fundamentals 3 - Exercises</h1>
+
+        <h2>Exercise 1: add7(...)</h2>
+        <input type="text" placeholder="Enter an integer" class="exercise-1">
+        <section class="exercise-1"></section>
+
+        <script>
+
+            /***** Exercise 1 *****/
+
+            function add7(number) {
+                return number + 7;
+            }
+
+            const input1 = document.querySelector("input.exercise-1");
+            const section1 = document.querySelector("section.exercise-1");
+
+            input1.addEventListener('change', () => {
+                const inputValue = Number(input1.value);
+                section1.innerHTML = '';
+                section1.appendChild(document.createElement('p')).textContent = add7(inputValue);
+            });
+        </script>
+    </body>
+</html>
