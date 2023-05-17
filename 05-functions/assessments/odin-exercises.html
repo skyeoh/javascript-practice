@@ -31,6 +31,10 @@
                class="exercise-2" size="30px">
         <section class="exercise-2"></section>
 
+        <h2>Exercise 3: capitalize(...)</h2>
+        <input type="text" placeholder="Enter text" class="exercise-3">
+        <section class="exercise-3"></section>
+
         <script>
 
             /***** Exercise 1 *****/
@@ -64,6 +68,24 @@
                 const num2 = inputValue[1];
                 section2.innerHTML = '';
                 section2.appendChild(document.createElement('p')).textContent = multiply(num1, num2);
+            });
+
+
+            /***** Exercise 3 *****/
+
+            function capitalize(text) {
+                if (text === '') return text;
+                if (text.length === 1) return text.toUpperCase();
+                return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+            }
+
+            const input3 = document.querySelector("input.exercise-3");
+            const section3 = document.querySelector("section.exercise-3");
+
+            input3.addEventListener('change', () => {
+                const inputText = input3.value;
+                section3.innerHTML = '';
+                section3.appendChild(document.createElement('p')).textContent = capitalize(inputText);
             });
         </script>
     </body>
