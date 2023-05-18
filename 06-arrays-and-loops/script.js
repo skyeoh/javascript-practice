@@ -8,3 +8,19 @@ console.log(array1);
 
 const array2 = new Array("apple", 200, true, array, function() { return 10; }, null, undefined);
 console.log(array2);
+
+console.log(array[0]);
+console.log(array[6]);
+console.log(array1[4]);
+console.log(array2[3]);
+console.log(array);
+console.log(array1);
+console.log(array2);
+
+console.log(array1);
+array1[4] = "A function was here";
+console.log(array1);
+
+console.log(array2);
+array2[5] = 100;
+console.log(array2);
