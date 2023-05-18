@@ -35,6 +35,10 @@
         <input type="text" placeholder="Enter text" class="exercise-3">
         <section class="exercise-3"></section>
 
+        <h2>Exercise 4: lastLetter(...)</h2>
+        <input type="text" placeholder="Enter text" class="exercise-4">
+        <section class="exercise-4"></section>
+
         <script>
 
             /***** Exercise 1 *****/
@@ -86,6 +90,23 @@
                 const inputText = input3.value;
                 section3.innerHTML = '';
                 section3.appendChild(document.createElement('p')).textContent = capitalize(inputText);
+            });
+
+
+            /***** Exercise 4 *****/
+
+            function lastLetter(text) {
+                if (text === '') return text;
+                return text.charAt(text.length - 1);
+            }
+
+            const input4 = document.querySelector("input.exercise-4");
+            const section4 = document.querySelector("section.exercise-4");
+
+            input4.addEventListener('change', () => {
+                const inputText = input4.value;
+                section4.innerHTML = '';
+                section4.appendChild(document.createElement("p")).textContent = lastLetter(inputText);
             });
         </script>
     </body>
