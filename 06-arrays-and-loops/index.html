@@ -4,10 +4,30 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Arrays and Loops</title>
+
+        <style>
+            p {
+                margin: 0;
+            }
+        </style>
     </head>
 
     <body>
         <h1>Arrays and Loops</h1>
+
+        <h2>Creation using array literal</h2>
+
+        <p>const array = ["apple", "orange", 10, 200n, true, false, null, undefined]</p>
+        <p>console.log(array)</p>
+
+        <p>const array1 = ["apple", 200, true, array, function() { return 10; }]</p>
+        <p>console.log(array1)</p>
+
+
+        <h2>Creation using keyword <em>new</em></h2>
+
+        <p>const array2 = new Array("apple", 200, true, array, function() { return 10; }, null, undefined)</p>
+        <p>console.log(array2)</p>
 
         <script src="./script.js"></script>
     </body>
