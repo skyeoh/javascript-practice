@@ -24,3 +24,12 @@ console.log(array1);
 console.log(array2);
 array2[5] = 100;
 console.log(array2);
+
+console.log("--------------------");
+for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+}
+console.log("--------------------");
+
+array2.forEach(item => console.log(item));
+console.log("--------------------");
