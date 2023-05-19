@@ -33,3 +33,7 @@ console.log("--------------------");
 
 array2.forEach(item => console.log(item));
 console.log("--------------------");
+
+console.log(Array.isArray(array));
+console.log(array1 instanceof Array);
+console.log(array2 instanceof Array);
