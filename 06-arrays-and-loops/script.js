@@ -42,3 +42,16 @@ console.log("----- String representation of an array -----");
 console.log(array1.toString());
 console.log(array1.join());
 console.log(array1.join(' | '));
+
+console.log("----- Adding and removing elements from an array -----");
+array.push("NEW ELEMENT");
+console.log(array);
+const elem1 = array.pop();
+console.log(elem1);
+console.log(array);
+
+const elem2 = array.shift();
+console.log(elem2);
+console.log(array);
+array.unshift(elem2);
+console.log(array);
