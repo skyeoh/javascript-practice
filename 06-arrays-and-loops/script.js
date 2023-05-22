@@ -37,3 +37,8 @@ console.log("--------------------");
 console.log(Array.isArray(array));
 console.log(array1 instanceof Array);
 console.log(array2 instanceof Array);
+
+console.log("----- String representation of an array -----");
+console.log(array1.toString());
+console.log(array1.join());
+console.log(array1.join(' | '));
