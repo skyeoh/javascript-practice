@@ -55,3 +55,9 @@ console.log(elem2);
 console.log(array);
 array.unshift(elem2);
 console.log(array);
+
+console.log('----- Alternative way of removing elements -----');
+console.log(array);
+delete array[1];
+delete array[4];
+console.log(array);
