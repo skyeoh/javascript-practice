@@ -61,3 +61,6 @@ console.log(array);
 delete array[1];
 delete array[4];
 console.log(array);
+
+console.log('----- Merging multiple arrays -----');
+console.log(array.concat(' | ', array1, ' | ', array2));
