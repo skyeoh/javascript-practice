@@ -81,3 +81,12 @@ console.log(array3.flat(1));
 console.log(array3.flat(2));
 console.log(array3.flat(3));
 console.log(array3.flat(4));
+
+console.log('----- Splicing an array -----');
+console.log(array1);
+array1.splice(1, 2, "orange", 28, () => "hello world"); // remove and add items
+console.log(array1);
+array1.splice(5, 0, "new item 1", "new item 2");        // add items only
+console.log(array1);
+array1.splice(1, 2);                                    // remove items only
+console.log(array1);
