@@ -64,3 +64,20 @@ console.log(array);
 
 console.log('----- Merging multiple arrays -----');
 console.log(array.concat(' | ', array1, ' | ', array2));
+
+console.log('----- Flattening ("unrolling") an array -----');
+const arrayLvl1 = [1, 1n, '1'];
+const arrayLvl2 = [2n, 2, '2'];
+const arrayLvl3 = [3, '3', 3n];
+const arrayLvl4 = ['4', 4, 4n ];
+const array3 = [0, 0n];
+array3.push(arrayLvl1);
+arrayLvl1.push(arrayLvl2);
+arrayLvl2.push(arrayLvl3);
+arrayLvl3.push(arrayLvl4);
+array3.push('00');
+console.log(array3.flat(0));
+console.log(array3.flat(1));
+console.log(array3.flat(2));
+console.log(array3.flat(3));
+console.log(array3.flat(4));

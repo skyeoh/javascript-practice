@@ -109,6 +109,25 @@
 
         <p>console.log(array.concat(' | ', array1, ' | ', array2))</p>
 
+
+        <h2>Flattening ("unrolling") an array</h2>
+
+        <p>const arrayLvl1 = [1, 1n, '1']</p>
+        <p>const arrayLvl2 = [2n, 2, '2']</p>
+        <p>const arrayLvl3 = [3, '3', 3n]</p>
+        <p>const arrayLvl4 = ['4', 4, 4n ]</p>
+        <p>const array3 = [0, 0n]</p>
+        <p>array3.push(arrayLvl1)</p>
+        <p>arrayLvl1.push(arrayLvl2)</p>
+        <p>arrayLvl2.push(arrayLvl3)</p>
+        <p>arrayLvl3.push(arrayLvl4)</p>
+        <p>array3.push('00')</p>
+        <p>console.log(array3.flat(0))</p>
+        <p>console.log(array3.flat(1))</p>
+        <p>console.log(array3.flat(2))</p>
+        <p>console.log(array3.flat(3))</p>
+        <p>console.log(array3.flat(4))</p>
+
         <script src="./script.js"></script>
     </body>
 </html>
