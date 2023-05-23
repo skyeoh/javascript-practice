@@ -90,3 +90,10 @@ array1.splice(5, 0, "new item 1", "new item 2");        // add items only
 console.log(array1);
 array1.splice(1, 2);                                    // remove items only
 console.log(array1);
+
+console.log('----- Slicing an array ------');
+console.log(array1);
+console.log(array1.slice(2, 5));
+console.log(array1.slice(2));
+console.log(array1.slice(-5, -2));
+console.log(array1.slice(-5));
