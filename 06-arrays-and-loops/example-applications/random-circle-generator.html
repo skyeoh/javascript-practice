@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=content-width">
+        <title>Random circle generator</title>
+
+        <style>
+            div.drawing-board {
+                position: relative;
+                width: 600px;
+                height: auto;
+                border: 1px solid gray;
+                padding: 12px;
+            }
+
+            .drawing-board canvas {
+                background-color: lightgray;
+                width: 100%;
+                height: 100%;
+            }
+
+            .drawing-board button {
+                position: absolute;
+                top: 24px;
+                left: 24px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="drawing-board">
+            <canvas></canvas>
+            <button>Draw circles!</button>
+        </div>
+
+        <script>
+            const button = document.querySelector(".drawing-board button");
+            const canvas = document.querySelector(".drawing-board canvas");
+            const ctx = canvas.getContext("2d");
+
+            function random(number) {
+                return Math.floor(Math.random() * number);
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                for (let i = 0; i < 100; i++) {
+                    ctx.beginPath();
+                    ctx.fillStyle = "rgba(255,0,0,0.5)";
+                    ctx.arc(
+                        random(canvas.width),
+                        random(canvas.height),
+                        random(25),
+                        0,
+                        2 * Math.PI
+                    );
+                    ctx.fill();
+                }
+            }
+
+            button.addEventListener("click", draw);
+        </script>
+    </body>
+</html>
