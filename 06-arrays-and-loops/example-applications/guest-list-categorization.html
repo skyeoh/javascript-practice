@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Guest List Categorization</title>
+
+        <style>
+            p {
+                font-size: 1.5rem;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div>
+            <label for="input-all">Enter name of guest:</label>
+            <input type="text" id="input-all">
+        </div>
+
+        <div style="margin: 1rem 0">
+            <label for="input-refuse">Enter name of guest to refuse:</label>
+            <input type="text" id="input-refuse">
+        </div>
+
+        <button>Print lists</button>
+
+        <div class="output"></div>
+
+        <script>
+            const inputAll = document.querySelector('#input-all');
+            const inputRefuse = document.querySelector('#input-refuse');
+            const button = document.querySelector('button');
+            const output = document.querySelector('.output');
+
+            const guestList = [];
+            const refuseList = [];
+
+            inputAll.addEventListener('change', () => {
+                guestList.push(inputAll.value);
+                inputAll.value = '';
+            });
+
+            inputRefuse.addEventListener('change', () => {
+                refuseList.push(inputRefuse.value);
+                inputRefuse.value = '';
+            });
+
+            button.addEventListener('click', () => {
+                output.innerHTML = '';
+                let admitList = [...guestList];
+
+                /* Output ALL guests */
+                const paraAll = document.createElement('p');
+                paraAll.textContent = 'Guest list: ';
+                outputList(paraAll, guestList);
+                output.appendChild(paraAll);
+
+                /* Output admitted guests */
+                const paraAdmit = document.createElement('p');
+                paraAdmit.style.color = 'green';
+                paraAdmit.textContent = 'Admit: ';
+                for (const refuseGuest of refuseList) {
+                    for (let i = 0; i < admitList.length; i++) {
+                        if (admitList[i] === refuseGuest) {
+                            delete admitList[i];
+                            break;
+                        }
+                    }
+                }
+                admitList = admitList.filter(
+                    guest => (guest !== undefined)
+                );
+                outputList(paraAdmit, admitList);
+                output.appendChild(paraAdmit);
+
+                /* Output refused guests */
+                const paraRefuse = document.createElement('p');
+                paraRefuse.style.color = 'red';
+                paraRefuse.textContent = 'Refuse: ';
+                outputList(paraRefuse, refuseList);
+                output.appendChild(paraRefuse);
+            });
+
+            function outputList(element, list) {
+                for (let i = 0; i < list.length; i++) {
+                    if (i === list.length - 1) {
+                        element.textContent += `${list[i]}.`;
+                    } else {
+                        element.textContent += `${list[i]}, `;
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
