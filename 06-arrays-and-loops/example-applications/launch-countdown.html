@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Launch Countdown</title>
+    </head>
+
+    <body>
+
+        <label for="input"></label>
+        <input type="text" id="input" placeholder="Enter an integer">
+        <div class="output"></div>
+
+        <script>
+            const input = document.querySelector('#input');
+            const output = document.querySelector('.output');
+
+            input.addEventListener('change', () => {
+                const countdownNumber = Number(input.value);
+                output.innerHTML = '';
+
+                let i = countdownNumber;
+                while (i >= 0) {
+                    const para = document.createElement('p');
+                    output.appendChild(para);
+
+                    if (i === 0) {
+                        para.textContent = 'Blast off!';
+                    } else if (i === countdownNumber) {
+                        para.textContent = `Countdown ${i}`;
+                    } else {
+                        para.textContent = `${i}`;
+                    }
+
+                    i--;
+                }
+            });
+        </script>
+    </body>
+</html>
