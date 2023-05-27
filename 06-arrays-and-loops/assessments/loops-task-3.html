@@ -19,6 +19,9 @@
 
     <body>
 
+        <label for="input-text">Enter an integer:</label>
+        <input type="text" id="input-text">
+
         <section class="preview">
 
 
@@ -26,8 +29,8 @@
         </section>
 
         <script>
-            let i = 500;
-            const para = document.createElement('p');
+            const input = document.querySelector('input#input-text');
+            const section = document.querySelector('section.preview');
 
             function isPrime(num) {
                 for (let i = 2; i < num; i++) {
@@ -39,22 +42,23 @@
                 return true;
             }
 
+            input.addEventListener('change', () => {
+                let i = Number(input.value);
+                const para = document.createElement('p');
 
-            // Add your code here
-            while (i > 1) {
-                if (!isPrime(i--)) {
-                    continue;
+                while (i > 1) {
+                    if (!isPrime(i--)) {
+                        continue;
+                    }
+
+                    para.textContent += `${i+1}, `;
                 }
 
-                para.textContent += `${i+1}, `;
-            }
+                para.textContent = para.textContent.slice(0, -2);
 
-            para.textContent = para.textContent.slice(0, -2);
-
-
-            // Don't edit the code below here!
-            const section = document.querySelector('section.preview');
-            section.appendChild(para);
+                section.innerHTML = '';
+                section.appendChild(para);
+            });
         </script>
     </body>
 </html>
