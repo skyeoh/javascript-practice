@@ -7,6 +7,7 @@
       p {
         color: purple;
         margin: 0.5em 0;
+        font-size: 1.5rem;
       }
 
       * {
@@ -17,6 +18,9 @@
 
   <body>
 
+    <label for="input-text">Search for name:</label>
+    <input type="text" id="input-text">
+
     <section class="preview">
 
 
@@ -24,8 +28,8 @@
     </section>
 
     <script>
-        const name = 'Mustafa';
-        const para = document.createElement('p');
+        const input = document.querySelector('input#input-text');
+        const section = document.querySelector('section');
 
         const phonebook = [
           { name : 'Chris', number : '1549' },
@@ -36,19 +40,23 @@
           { name : 'Tina', number : '4312' },
           { name : 'Bert', number : '7780' },
           { name : 'Jada', number : '2282' },
-        ]
+        ];
 
-        // Add your code here
-        for (let i = 0; i < phonebook.length; i++) {
-            if (phonebook[i].name === name) {
-                para.textContent = `${phonebook[i].name}: ${phonebook[i].number}`;
-                break;
-            }
-        }
+        input.addEventListener('change', () => {
+          const name = input.value;
+          const para = document.createElement('p');
 
-        // Don't edit the code below here!
-        const section = document.querySelector('section');
-        section.appendChild(para);
+          para.textContent = 'Cannot find name';
+          for (let i = 0; i < phonebook.length; i++) {
+              if (phonebook[i].name === name) {
+                  para.textContent = `${phonebook[i].name}: ${phonebook[i].number}`;
+                  break;
+              }
+          }
+
+          section.innerHTML = '';
+          section.appendChild(para);
+        });
     </script>
   </body>
 </html>
