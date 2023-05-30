@@ -80,6 +80,20 @@
                 }
             }
 
+
+            /******** Task 6: Repeat until the input is correct ********/
+            console.log('---------- Task 6 ----------');
+
+            while (true) {
+                const inputNumber = prompt("Enter a number greater than 100");
+
+                if (inputNumber === '' || inputNumber === null || inputNumber > 100) {
+                    break;
+                }
+
+                console.log(inputNumber);
+            }
+
         </script>
     </body>
 </html>
