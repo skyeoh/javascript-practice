@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Events</title>
+    </head>
+
+    <body>
+        <h1>The Odin Project: DOM Manipulation and Events</h1>
+
+        <h2>Event Handling</h2>
+
+        <h3>Method 1: Specify function attributes directly on HTML elements</h3>
+        <button onclick="alert('Hello World')">Click Me</button>
+
+        <h3>Method 2: Set properties of form <span>on[eventType]</span> on DOM nodes</h3>
+        <button id="btn-1">Click Me Too</button>
+
+        <h3>Method 3: Attach event listeners to DOM nodes</h3>
+        <button id="btn-2">Click Me Three</button>
+
+        <script>
+            /***** Method 2 *****/
+            const btn1 = document.querySelector('#btn-1');
+            btn1.onclick = () => alert('Hello World');
+
+            const span = document.querySelector('span');
+            span.style.color = 'red';
+            span.style.backgroundColor = 'lightgray';
+            span.style.fontFamily = '"Courier New", monospace';
+            span.style.fontWeight = '400';
+            span.style.padding = '2px';
+
+            /***** Method 3 *****/
+            const btn2 = document.querySelector('#btn-2');
+            btn2.addEventListener('click', () => {
+                alert('Hello World');
+            });
+        </script>
+    </body>
+</html>
