@@ -20,6 +20,11 @@
         <h3>Method 3: Attach event listeners to DOM nodes</h3>
         <button id="btn-2">Click Me Three</button>
 
+        <h3>Using named functions</h3>
+        <button class="named-func" onclick="alertFunction()">Click Me One More Time</button>
+        <button class="named-func">Click Me Again</button>
+        <button class="named-func">Click Me One Too Many Times</button>
+
         <script>
             /***** Method 2 *****/
             const btn1 = document.querySelector('#btn-1');
@@ -37,6 +42,21 @@
             btn2.addEventListener('click', () => {
                 alert('Hello World');
             });
+
+            /***** Using named functions *****/
+            btnGroup = document.querySelectorAll('.named-func');
+            btnGroup = Array.from(btnGroup);
+            btnGroup.forEach(btn => {
+                btn.style.display = 'block';
+                btn.style.marginBottom = '10px';
+            });
+
+            btnGroup[1].onclick = alertFunction;
+            btnGroup[2].addEventListener('click', alertFunction);
+
+            function alertFunction() {
+                alert('YAY! YOU DID IT!');
+            }
         </script>
     </body>
 </html>
